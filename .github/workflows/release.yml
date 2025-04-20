@@ -1,4 +1,4 @@
-name: 'C++ CI graphic_editor hw#5'
+name: 'C++ CI graphiceditor hw#5'
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
       - run: cmake --build . --target package
 #      # Run Google Tests
 #      - name: 'Run GTest'
-#        run: /home/runner/work/graphic_editor_hw5/graphic_editor_hw5/graphic_editor_test2
+#        run: /home/runner/work/graphic_editor_hw5/graphic_editor_hw5/graphiceditor_test2
       # Setup Pages
       - name: 'Setup Pages'
         uses: actions/configure-pages@v4
@@ -52,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
       # Run App Once
 #      - name: 'Run App Once'
-#        run: /home/runner/work/graphic_editor_hw5/graphic_editor_hw5/graphic_editor
+#        run: /home/runner/work/graphic_editor_hw5/graphic_editor_hw5/graphiceditor
       # Create Release Step
       - name: 'Create Release Step'
         id: create_release
@@ -72,6 +72,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./graphic_editor-0.0.${{ github.run_number }}-Linux.deb
-          asset_name: graphic_editor-0.0.${{ github.run_number }}-Linux.deb
+          asset_path: ./graphiceditor-0.0.${{ github.run_number }}-Linux.deb
+          asset_name: graphiceditor-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
