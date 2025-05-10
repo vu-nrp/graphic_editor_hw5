@@ -244,7 +244,7 @@ bool createButtonFabrique(const IButtonInfo::Type &type, IToolButton::Shared &bu
 
 struct Rectangle : public IGraphicItem
 {
-    static const ShapeType Id {1};
+    static const ShapeType Id;
 
     void draw() override
     {
@@ -258,6 +258,7 @@ struct Rectangle : public IGraphicItem
     simple_pair<uint32_t> dimensions {0, 0};
 
 };
+const Rectangle::ShapeType Rectangle::Id {1};
 
 //!
 //! \brief The Square class
@@ -265,7 +266,7 @@ struct Rectangle : public IGraphicItem
 
 struct Square : public IGraphicItem
 {
-    static const ShapeType Id {2};
+    static const ShapeType Id;
 
     void draw() override
     {
@@ -278,6 +279,7 @@ struct Square : public IGraphicItem
     uint32_t side {0};
 
 };
+const Square::ShapeType Square::Id {2};
 
 //!
 //! \brief The Сircle class
@@ -285,7 +287,7 @@ struct Square : public IGraphicItem
 
 struct Сircle : public IGraphicItem
 {
-    static const ShapeType Id {3};
+    static const ShapeType Id;
 
     void draw() override
     {
@@ -299,6 +301,7 @@ struct Сircle : public IGraphicItem
     uint32_t radius {0};
 
 };
+const Сircle::ShapeType Сircle::Id {3};
 
 //!
 //! \brief The SceneView class - place for drawing items
