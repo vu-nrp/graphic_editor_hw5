@@ -359,11 +359,16 @@ private:
 class OpenFileButton : public IToolButton
 {
 public:
+
+    //!
+    //! \brief Id - unique UI button (open file button) id
+    //!
+
     static const Type Id {};
 
     //!
     //! \brief onClick - handler for load data from file to model
-    //! \param data model
+    //! \param model - scene data model
     //!
 
     void onClick(const SceneModel::Pointer &model) override
@@ -384,11 +389,16 @@ public:
 class NewFileButton : public IToolButton
 {
 public:
+
+    //!
+    //! \brief Id - unique UI button (new file button) id
+    //!
+
     static const Type Id {};
 
     //!
     //! \brief onClick - handler for new document creating
-    //! \param model
+    //! \param model - scene data model
     //!
 
     void onClick(const SceneModel::Pointer &model) override
@@ -406,11 +416,16 @@ public:
 class SaveFileButton : public IToolButton
 {
 public:
+
+    //!
+    //! \brief Id - unique UI button (save to file button) id
+    //!
+
     static const Type Id {};
 
     //!
     //! \brief onClick - handler for save data to file
-    //! \param model
+    //! \param model - scene data model
     //!
 
     void onClick(const SceneModel::Pointer &model) override
@@ -431,6 +446,11 @@ public:
 class AddShapeButton : public IToolButton
 {
 public:
+
+    //!
+    //! \brief Id - unique UI button (add shape button) id
+    //!
+
     static const Type Id {};
 
     AddShapeButton(const IGraphicItem::ShapeType &type) :
@@ -441,7 +461,7 @@ public:
 
     //!
     //! \brief onClick - handler for new graphic item creation
-    //! \param model
+    //! \param model - scene data model
     //!
 
     void onClick(const SceneModel::Pointer &model) override
@@ -466,11 +486,16 @@ private:
 class DelShapeButton : public IToolButton
 {
 public:
+
+    //!
+    //! \brief Id - unique UI button (delete current graphic item button) id
+    //!
+
     static const Type Id {};
 
     //!
     //! \brief onClick - handler for current selected graphic item deletion
-    //! \param model
+    //! \param model - scene data model
     //!
 
     void onClick(const SceneModel::Pointer &model) override
