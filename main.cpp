@@ -131,7 +131,7 @@ protected:
 };
 
 //!
-//! \brief The GraphicItemCreator class
+//! \brief The GraphicItemCreator class - graphic item (shape) creator
 //!
 
 struct GraphicItemCreator : public CreateItemService
@@ -160,7 +160,7 @@ struct GraphicItemCreator : public CreateItemService
 };
 
 //!
-//! \brief The ButtonItemCreator class
+//! \brief The ButtonItemCreator class - UI buttons creator
 //!
 
 struct ButtonItemCreator : public CreateItemService
@@ -199,10 +199,10 @@ struct ButtonItemCreator : public CreateItemService
 };
 
 //!
-//! \brief createGraphicItemFabrique - graphic item creating fabrique
-//! \param type
-//! \param graphicItem
-//! \return
+//! \brief createGraphicItemFabrique - graphic item (shape) creating fabrique
+//! \param type - unique graphic item id
+//! \param graphicItem - created graphic item instance
+//! \return true on success
 //!
 
 bool createGraphicItemFabrique(const IGraphicItem::ShapeType &type, IGraphicItem::Shared &graphicItem)
@@ -220,9 +220,9 @@ bool createGraphicItemFabrique(const IGraphicItem::ShapeType &type, IGraphicItem
 
 //!
 //! \brief createButtonFabrique - UI button creating fabrique
-//! \param type
-//! \param buttonItem
-//! \return
+//! \param type - unique button id
+//! \param buttonItem - created button instance
+//! \return true on success
 //!
 
 bool createButtonFabrique(const IButtonInfo::Type &type, IToolButton::Shared &buttonItem)
@@ -239,7 +239,7 @@ bool createButtonFabrique(const IButtonInfo::Type &type, IToolButton::Shared &bu
 }
 
 //!
-//! \brief The Rectangle class
+//! \brief The Rectangle class - presentation of rectangle shape
 //!
 
 struct Rectangle : public IGraphicItem
@@ -271,7 +271,7 @@ private:
 const Rectangle::ShapeType Rectangle::Id {1};
 
 //!
-//! \brief The Square class
+//! \brief The Square class - presentation of square shape
 //!
 
 struct Square : public IGraphicItem
@@ -303,7 +303,7 @@ private:
 const Square::ShapeType Square::Id {2};
 
 //!
-//! \brief The Сircle class
+//! \brief The Сircle class - presentation of circle shape
 //!
 
 struct Сircle : public IGraphicItem
@@ -383,7 +383,7 @@ public:
 };
 
 //!
-//! \brief The NewFileButton class
+//! \brief The NewFileButton class - button for new scene/document creation
 //!
 
 class NewFileButton : public IToolButton
@@ -412,6 +412,9 @@ public:
 
 };
 
+//!
+//! \brief The SaveFileButton class - button for save scene data to file
+//!
 
 class SaveFileButton : public IToolButton
 {
@@ -440,7 +443,7 @@ public:
 };
 
 //!
-//! \brief The AddShapeButton class
+//! \brief The AddShapeButton class - button for append graphic items (shapes) to scene
 //!
 
 class AddShapeButton : public IToolButton
@@ -480,7 +483,7 @@ private:
 };
 
 //!
-//! \brief The DelShapeButton class
+//! \brief The DelShapeButton class - button for delete current selected graphic item
 //!
 
 class DelShapeButton : public IToolButton
