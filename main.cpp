@@ -244,20 +244,27 @@ bool createButtonFabrique(const IButtonInfo::Type &type, IToolButton::Shared &bu
 
 struct Rectangle : public IGraphicItem
 {
+    //!
+    //! \brief Id - unique graphic item (rectangle) id
+    //!
+
     static const ShapeType Id;
 
     //!
     //! \brief draw - draw rectangle graphic item with defined width, height and position
     //!
+
     void draw() override
     {
         std::printf("draw rectangle at point %s, dimensions %s\n", print_pair(center, ",").c_str(), print_pair(dimensions, "x").c_str());
     }
 
 private:
+
     //!
     //! @var dimensions - width and height of rectangle, mm
     //!
+
     simple_pair<uint32_t> dimensions {0, 0};
 
 };
@@ -269,19 +276,26 @@ const Rectangle::ShapeType Rectangle::Id {1};
 
 struct Square : public IGraphicItem
 {
+    //!
+    //! \brief Id - unique graphic item (square) id
+    //!
+
     static const ShapeType Id;
 
     //!
     //! \brief draw - draw square graphic item with defined side and position
     //!
+
     void draw() override
     {
         std::printf("draw square at point %s, with side %s\n", print_pair(center, ",").c_str(), to_str(side).c_str());
     }
 
 private:
+
     //!
     //! @var side - square side, mm
+    //!
     //!
     uint32_t side {0};
 
@@ -294,20 +308,27 @@ const Square::ShapeType Square::Id {2};
 
 struct Сircle : public IGraphicItem
 {
+    //!
+    //! \brief Id  - unique graphic item (circle) id
+    //!
+
     static const ShapeType Id;
 
     //!
     //! \brief draw - draw circle graphic item with defined radius and position
     //!
+
     void draw() override
     {
         std::printf("draw circle at point %s, with radius %s\n", print_pair(center, ",").c_str(), to_str(radius).c_str());
     }
 
 private:
+
     //!
     //! @var radius - radius of circle, mm
     //!
+
     uint32_t radius {0};
 
 };
