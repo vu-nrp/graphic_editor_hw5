@@ -10,6 +10,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(${PROJECT_NAME}
     main.cpp
+    types.h
+    window.h
+    helpers.h
+    buttons.h
+    registration.h
+    settingsstorage.h
+    settingsstorage.cpp
 )
 
 install(TARGETS ${PROJECT_NAME}
